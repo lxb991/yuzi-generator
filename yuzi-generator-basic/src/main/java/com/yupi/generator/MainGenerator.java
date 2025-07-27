@@ -6,6 +6,9 @@ import freemarker.template.TemplateException;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * 调用动静态方法生成目标代码项目
+ */
 public class MainGenerator {
     public static void main(String[] args) throws TemplateException, IOException {
         //准备数据

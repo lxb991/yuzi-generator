@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.*;
 
 /**
- * 全局配置对象
+ * ftl测试demo
  */
 public class FreeMarkerTest {
 

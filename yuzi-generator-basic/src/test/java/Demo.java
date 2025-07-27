@@ -7,6 +7,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 
+/**
+ * 静态文件生成——测试
+ */
 public class Demo {
     public static void main(String[] args) throws IOException {
         String proPath = System.getProperty("user.dir");
