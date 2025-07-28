@@ -7,6 +7,7 @@ import picocli.CommandLine;
 import picocli.CommandLine.Command;
 
 /**
+ * CommandExecutor：命令执行器
  *@Command:开始命令行的注解
  */
 @Command(name = "fsy",mixinStandardHelpOptions = true)

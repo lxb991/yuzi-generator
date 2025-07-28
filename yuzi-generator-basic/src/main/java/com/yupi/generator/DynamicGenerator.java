@@ -5,9 +5,7 @@ import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * 动态文件生成
@@ -37,7 +35,8 @@ public class DynamicGenerator {
         String tempalteName = new File(inputPath).getName();
         Template template = configuration.getTemplate(tempalteName);
         //设置输出文件名
-        FileWriter out = new FileWriter(outputPath);
+//        FileWriter out = new FileWriter(outputPath);
+        Writer out = new OutputStreamWriter(new FileOutputStream(outputPath), "UTF-8");//解决动态生成文件内容乱码问题
         //开始生成
         template.process(model,out);
         //关流

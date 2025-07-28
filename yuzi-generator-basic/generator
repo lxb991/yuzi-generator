@@ -1,0 +1,4 @@
+# Linux脚本 #!/bin/bash是系统根据它知道用哪个程序来执行脚本
+# 去git bash，命令是：./genreate ListCommand
+#!/bin/bash
+java -jar target/yuzi-generator-basic-1.0-SNAPSHOT-jar-with-dependencies.jar  "$@"
