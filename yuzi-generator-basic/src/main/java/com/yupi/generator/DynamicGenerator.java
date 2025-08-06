@@ -1,5 +1,6 @@
 package com.yupi.generator;
 
+import cn.hutool.core.io.FileUtil;
 import com.yupi.model.MainTemplateConfig;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -36,6 +37,10 @@ public class DynamicGenerator {
         Template template = configuration.getTemplate(tempalteName);
         //设置输出文件名
 //        FileWriter out = new FileWriter(outputPath);
+        //如果文件不存在则创建
+        if(!FileUtil.exist(outputPath)){
+            FileUtil.touch(outputPath);
+        }
         Writer out = new OutputStreamWriter(new FileOutputStream(outputPath), "UTF-8");//解决动态生成文件内容乱码问题
         //开始生成
         template.process(model,out);
