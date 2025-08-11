@@ -23,7 +23,7 @@ public class MainGenerator {
             FileUtil.mkdir(outputPath);
         }
 
-        //优化：从原始模板 复制到 生成的代码包中
+        //优化：将原始模板 复制到 生成的代码包中
         String sourceRootPath = meta.getFileConfig().getSourceRootPath();
         String sourceCopyDestPath = outputPath + File.separator + ".source";
         FileUtil.copy(sourceRootPath,sourceCopyDestPath,false);
