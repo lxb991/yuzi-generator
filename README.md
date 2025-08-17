@@ -9,4 +9,8 @@
 
 ## 命令行工具开发
 
+## 二阶段即maker项目的使用教程
+1. 执行 MainGenerator 生成打包好的制作代码的代码制作工具 非简约版和简约版
+2. 打开简约版的Terminal，执行脚本命令：./generator GenerateCommand -a -o -l (./generator代表执行当前目录下的generator脚本)
+3. 制作需要的代码
 
